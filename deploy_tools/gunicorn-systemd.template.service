@@ -1,0 +1,11 @@
+[Unit]
+Descrption=Gunicorn server for DOMAIN
+
+[Service]
+Restart=on-failure
+User=kt5356
+WorkingDirectory=/home/kt5356/sites/DOMAIN
+EnvironmentFile=/home/kt5356/sites/DOMAIN/.env 
+
+[Install]
+WantedBy=multi-user.target
