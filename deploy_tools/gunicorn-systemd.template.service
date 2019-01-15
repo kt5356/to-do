@@ -7,5 +7,9 @@ User=kt5356
 WorkingDirectory=/home/kt5356/sites/DOMAIN
 EnvironmentFile=/home/kt5356/sites/DOMAIN/.env 
 
+ExecStart=/home/kt5356/sites/DOMAIN/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/DOMAIN.socket \
+    superlists.wsgi:application
+
 [Install]
 WantedBy=multi-user.target
